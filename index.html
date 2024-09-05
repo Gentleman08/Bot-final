@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RASA Chatbot</title>
+    <style>
+        /* Set background image to cover the entire page */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            background-image: url('doj.jpg');
+            background-size: 100% 100%; /* Adjusts the image to fill the entire viewport */
+            background-repeat: no-repeat;
+            background-position: center center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Optional: Center the chat widget on the page */
+        #rasa-chat-widget {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .rw-conversation-container .rw-header {
+            background-color: #d2b48c; /* Light brown header */
+        }
+
+        .rw-conversation-container .rw-message-container .rw-message.replies .re-client {
+            background-color: #f5f5dc; /* Off-cream for client messages */
+        }
+
+        .rw-conversation-container .rw-message-container .rw-message .rw-response {
+            background-color: #f5deb3; /* Light brown for bot responses */
+        }
+
+        .rw-launcher {
+            background-color: #d2b48c; /* Light brown launcher */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="rasa-chat-widget" data-websocket-url="http://localhost:8089/socket.io"></div>
+    <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+
+</body>
+</html>
